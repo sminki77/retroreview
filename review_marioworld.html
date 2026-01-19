@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" >
+    <title>Image Background</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img id="bg-image" src="review_marioworld.png" alt="Background">
+    
+	<a href="review_main.html">
+    <img id="arrow_back" src="arrow_back.gif"> </a>
+	</a>
+	
+	<p id="text_title"> SUPER MARIO WORLD </p>
+	<p id="text_review"> So all in all, with its enhanced graphics, its memorable music and 
+	tight controls, is Super Mario World as amazing as people say it is, 
+	and is worthy of such praise after nearly 30 years? Well…..yes and no really. 
+	As noted previously, the music is very memorable, the graphics do look good and
+	the level design is also impressive and elegant. However, if the question was is it 
+	the most definitive Mario title I would have to respectfully disagree and say that 
+	Mario 64 would be the title to be the most definitive. Yes Super Mario World introduced
+	Yoshi and the cape power-up that adds an exciting feature to the platforming world and 
+	toe-tapping music and 96 levels (crikey – Ed). But at its core is a platforming game that
+	although done well, didn’t push the boundaries that something like Mario 64 did. It isn’t a 
+	question that Mario 64 had more powerful hardware or pushed Mario into 3D gaming, it just 
+	brought new aspects to the table that reinvented the franchise and didn’t let it become 
+	stale. The passage of time though and the hype surrounding the game in effect may be its
+	own worst enemy when it comes to playing the game for the first time. Having played the
+	game for a number of hours, I really wanted to love this game and share the same views 
+	that countless people prior to myself have had. </p>
+	
+	<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="supermarioworld2.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="supermarioworld3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="supermarioworld4.jpg" style="width:100%">
+  </div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  
+</div>
+</div>
+</div>
+
+<div class="slideshow-buttons">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<br>
+</body>
+</html>

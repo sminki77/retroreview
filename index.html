@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video id="bg-video" muted loop playsinline>
+        <source src="video1.mkv" type="video/mp4">
+        <source src="your-video.webm" type="video/webm">
+    </video>
+    
+    <a href="review_main.html" id="hover-box-ind"></a>
+    
+    <script>
+        const video = document.getElementById('bg-video');
+        const hoverBox = document.getElementById('hover-box-ind');
+        
+        hoverBox.addEventListener('mouseenter', () => {
+            video.loop = true;
+            video.currentTime = 0;
+            video.play();
+        });
+        
+        hoverBox.addEventListener('mouseleave', () => {
+            video.loop = false;
+        });
+    </script>
+</body>
+</html>
